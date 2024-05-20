@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = JokesApp
+build_property.ProjectDir = /Users/dilshan/Projects/dotnet/JokesApp/JokesApp/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

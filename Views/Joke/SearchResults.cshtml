@@ -1,0 +1,31 @@
+@model JokesApp.Models.Joke
+
+<div class="container-fluid" style="background-color: #f5f5f5; padding: 50px 0;">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 text-center">
+            <h2 style="font-size: 3rem; font-weight: bold; color: #333;">Search Results</h2>
+            @if (Model != null)
+            {
+                <div class="card" style="width: 50rem; margin: 0 auto;">
+                    <div class="card-body">
+                        <p style="font-size: 1.5rem; color: #666;">Question:</p>
+                        <p style="font-size: 1.8rem; font-weight: bold; color: #333;">@Model.JokeQuestion</p>
+                        <p style="font-size: 1.5rem; color: #666;">Answer:</p>
+                        <p style="font-size: 1.8rem; font-weight: bold; color: #333;">@Model.JokeAnswer</p>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <p style="font-size: 1.5rem; color: #666;">No jokes were found for the entered question.</p>
+            }
+            <br />
+            <div class="text-center">
+                <a asp-action="Create" class="btn btn-primary btn-lg"
+                    style="padding: 10px 40px; font-size: 1.5rem;">Create a New Joke</a>
+                <a asp-action="Index" class="btn btn-secondary btn-lg"
+                    style="padding: 10px 40px; font-size: 1.5rem;">Jokes List</a>
+            </div>
+        </div>
+    </div>
+</div>

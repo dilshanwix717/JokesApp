@@ -1,0 +1,29 @@
+@model JokesApp.Models.Joke
+
+<div class="container-fluid" style="background-color: #f5f5f5; padding: 50px 0;">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 text-center">
+            <h2 style="font-size: 3rem; font-weight: bold; color: #333;">Search for a Joke</h2>
+            <p style="font-size: 1.2rem; color: #666;">Enter a joke question below to search for a matching joke in our
+                database.</p>
+            <form asp-action="Search" method="get">
+                <div class="form-group">
+                    <label asp-for="JokeQuestion" class="control-label"></label>
+                    <div class="input-group">
+                        <input asp-for="JokeQuestion" class="form-control" placeholder="Enter a joke question"
+                            style="padding: 10px; font-size: 1.2rem;" />
+                        <span asp-validation-for="JokeQuestion" class="text-danger text-center"></span>
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-primary"
+                                style="padding: 10px 20px; font-size: 1.2rem;">
+                                <i class="fas fa-search"></i> Search
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <p style="font-size: 1.2rem; color: #666;">Note: You can enter a partial joke question to search for jokes
+                that contain the entered text.</p>
+        </div>
+    </div>
+</div>
